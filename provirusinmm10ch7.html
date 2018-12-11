@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      	<meta charset="utf-8" />
+        <title>ywan6_final</title>
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js$
+        <![endif]-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="js/autofill.js"></script>
+</head>
+
+<body id="main">
+
+	<h1>provirus integration search in mouse chromosome 7</h1>
+  <div class="row">
+    <div class="columni">
+    <img src="chef_mouse.jpg" alt="ma_mouse" width="100" height"100">
+    </div>
+    <div class="column">
+    <p> This is a web front-end search of potential provirus integration in mouse chromosome 7.
+     The server searches through 5000 bp upstream and downstream of the gene
+     If no repeats found in 5000 bp upstream and/or downstream of the gene, then no analysis will be done.
+     If repeats are found within 5000 bp upstream and/or downstream of the gene, the repeats will be aligned to the virus genomes that affect only vertebrates and humans,
+     and the results of the potential provirus integration will be show in descending order of the alignment score.</p>
+    </div>
+    <div class="empty">
+    <p>    </p>
+    </div>
+    </div>
+    <form name="gene_search" id="gene_search" action="search_gene.cgi">
+        Gene from mouse chromosome 7:<br>
+        <input id="tags" name="search_term" type="search" value="" autofocus="autofocus" placeholder="Enter a search term"/>
+        <input name="submit" type="submit" id="submit" value="submit">
+    </form>
+    <section id='results'>
+        <table>
+            <thead>
+            <tr>
+                <td>VIRUS</td>
+                <td>ACCESSION NUMBER</td>
+                <td>ALIGNMENT SCORE</td>
+                <td>REPEAT STARTS</td>
+                <td>REPEAT ENDS</td>
+            </tr>
+            </thead>
+            <tbody>
+                <!-- this will be filled in by javascript when there are results -->
+            </tbody>
+    </section>
+
+</body>
+
+</html>

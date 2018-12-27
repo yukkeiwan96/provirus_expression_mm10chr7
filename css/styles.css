@@ -1,0 +1,35 @@
+body {
+  background-color: Khaki;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  color: Darkgreen;
+  font-family: Gill Sans,sans-serif;  
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.columni{
+    float: left;
+    width:10%;
+    padding: 1px;
+    height: 160px;
+}
+.column {
+    float: left;
+    width: 60%;
+    padding: 1px;
+    height: 160px; 
+}
+.empty{
+  width: 30%;
+  height: 160px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
